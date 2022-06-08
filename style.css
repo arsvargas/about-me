@@ -1,0 +1,356 @@
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+
+body{
+    padding: 0;
+    margin: 0;
+    color: white;
+    font-family: 'Poiret One', cursive;
+    
+}
+
+.header-wrapper{
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(45deg, #024a6b, #0d8196,#1dd2f2, #75e1fc );
+    background-size: 400% 400%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    animation: backgroundTransition 8s ease-in-out infinite;
+}
+
+.header-wrapper img{
+    width: 150px;
+    border-top-left-radius: 30% ;    
+    border-bottom-right-radius: 30%;
+    border: #024a6b double 1px;
+    box-shadow: #024a6b 0px 0px 10px 5px;
+}
+
+h1{
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-weight: 300;
+}
+
+h2{
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-weight: 300;
+
+
+}
+h3 {
+    text-align: center;
+    justify-content: center;
+    font-weight: bold;
+    color:rgb(71, 71, 71);
+    font-size: 22px;
+    letter-spacing: 5px;
+    font-weight: 200;
+
+}
+.social-media{
+    margin-top: 1rem;
+    display: flex;
+}
+
+.social-media a{
+    text-decoration: none;
+    color: white;
+    font-size: 24px;
+    padding: 1rem 4rem;
+    border: 1px solid white;
+    min-width: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s cubic-bezier(0.55, 0.25, 0.675, 0.97);
+}
+
+a:hover{
+    color: #0d8196;
+    background-color: #ffffff;
+    transition: 1s;
+
+}
+
+@keyframes backgroundTransition {
+    0%{
+        background-position: 0% 80%;
+    }
+    50%{
+        background-position: 80% 100%;
+    }
+    100%{
+        background-position: 0% 90%;
+
+    }
+}
+
+.checkbox-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.checkbox{
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 9999;
+    transition: 400ms ease-in-out 0s;
+}
+
+.checkbox .trace {
+    width: 50px;
+    height: 2px;
+    background-color: white;
+    position: absolute;
+    border-radius: 4px;
+    transition:  0.5s ease-in-out;
+}
+
+.checkbox .trace:nth-child(1){
+    top: 26px;
+    transform: rotate(0);
+}
+
+.checkbox .trace:nth-child(2){
+    top: 46px;
+    transform: rotate(0);
+}
+
+.checkbox .trace:nth-child(3){
+    top: 66px;
+    transform: rotate(0);
+}
+
+#toggle {
+    display: none;
+
+}
+
+.menu{ 
+    position: absolute;
+    top: 28px;
+    right: 30px;
+    background: transparent;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 0px 0pc white;
+    z-index: -1;
+    transition: 400ms ease-in-out 0s;
+
+}
+
+.menu-itens {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    opacity: 0;
+    visibility: hidden;
+    transition: 400ms ease-in-out 0s;
+
+}
+
+.menu-itens ul{
+    list-style-type: none;
+}
+
+.menu-itens ul li a {
+    margin: 10px 0;
+    color: #0d8196;
+    text-decoration: none;
+    text-transform:uppercase;
+    letter-spacing: 4px;
+    font-size: 40px;
+
+}
+
+#toggle:checked + .checkbox .trace:nth-child(1) {
+    transform: rotate(45deg);
+    background-color: #0d8196;
+    top:47px;
+}
+
+#toggle:checked + .checkbox .trace:nth-child(2){
+    transform: translateX(-100px);
+    width: 30px;
+    visibility: hidden;
+    opacity: 0;
+}
+
+#toggle:checked + .checkbox .trace:nth-child(3){
+    transform: rotate(-45deg);
+    background-color: #0d8196;
+    top: 47px;
+}
+
+#toggle:checked + .checkbox{
+    background-color: white;
+
+}
+
+#toggle:checked ~ .menu{
+    box-shadow: 0px 0px 0px 100vmax white;
+    z-index: 1;
+}
+
+#toggle:checked ~ .menu-itens{
+    visibility: visible;
+    opacity: 1;
+}
+
+
+.aboutme-sec{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    background-color: #024a6b;
+    justify-content: center;
+    align-items: center;
+}
+.card-text{
+    width: 60%;
+    font-size: 20px;
+    letter-spacing: 1px;
+    color: rgb(255, 255, 255);
+    text-align: center;  
+    margin-bottom: 50px; 
+}
+
+.languages{
+    display: flex;
+    flex-direction: column; 
+    align-items: center;   
+}
+
+.languages p{
+    display: flex;   
+    justify-content: center;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.languages i{
+    margin-right: 20px;
+    font-size: 25px;
+}
+
+.interest ul{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+
+.interest ul li{
+    list-style: none;
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+    margin: 10px 0;
+}
+
+.interest ul li .fa{
+    color: #ffffff;
+    font-size: 25px;
+}
+
+.contactInfo ul{
+    position: relative;
+}
+
+.contactInfo ul li{
+    position: relative;
+    list-style: none;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+.contactInfo ul li .icon{
+    display: inline-block;
+    width: 30px;
+    font-size: 20px;
+    color: #4E8397;
+}
+
+.contactInfo ul li span{
+    color: #ffffff;
+    font-weight: 300;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+
+.contactInfo ul li span:hover{
+    transition: 1s;
+    color: #024a6b;
+}
+
+.contactInfo ul li span a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.footer {
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    background-color: #0d8196;
+    font-size: 24px;
+}
+
+/* reponsive */
+
+@media (max-width: 800px){
+    .social-media{
+        display: flex;
+        flex-direction: column;
+    }
+    .container{
+        margin-top: 0;
+    }
+    .card-container{
+        flex-direction: column;
+    }
+    .container .card-container:nth-child(1),
+    .container .card-container:nth-child(3){
+        flex-direction: column-reverse;
+    }
+    .card{
+        height: 280px;
+        width: 300px;
+    }
+    .card-text{
+        width: 90%;
+        margin-top: 2rem;
+        text-align: center;
+    }
+    .card:hover > .card-wrapper::before{
+        height: 280px;
+        width: 280px;
+    }
+    .languages{
+        justify-content: center;
+    }
+    .interest ul{
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+
