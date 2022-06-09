@@ -70,7 +70,7 @@ h3 {
     transition: 0.5s cubic-bezier(0.55, 0.25, 0.675, 0.97);
 }
 
-a:hover{
+.social-media a:hover{
     color: #0d8196;
     background-color: #ffffff;
     transition: 1s;
@@ -172,15 +172,19 @@ a:hover{
 .menu-itens ul{
     list-style-type: none;
 }
-
+.menu-itens ul li{
+    margin-bottom: 30px;
+}
 .menu-itens ul li a {
-    margin: 10px 0;
     color: #0d8196;
     text-decoration: none;
     text-transform:uppercase;
     letter-spacing: 4px;
     font-size: 40px;
+}
 
+.menu-itens ul li a:hover{
+    font-weight: 900;
 }
 
 #toggle:checked + .checkbox .trace:nth-child(1) {
@@ -217,7 +221,14 @@ a:hover{
     opacity: 1;
 }
 
-
+.arrow-left{
+    background-color: #024a6b;
+}
+.arrow-left i{
+    padding: 20px;
+    font-size: 25px;
+    color: #ffffff;
+}
 .aboutme-sec{
     width: 100%;
     height: auto;
@@ -276,13 +287,18 @@ a:hover{
 }
 
 .contactInfo ul li{
+    display: flex;
+    justify-content: center;
     position: relative;
     list-style: none;
     margin: 10px 0;
     cursor: pointer;
+    
 }
 
 .contactInfo ul li .icon{
+    display: flex;
+    justify-content: center;
     display: inline-block;
     width: 30px;
     font-size: 20px;
@@ -293,17 +309,15 @@ a:hover{
     color: #ffffff;
     font-weight: 300;
     font-size: 20px;
-    letter-spacing: 1px;
+    letter-spacing: 1px; 
+    margin-bottom: 20px;   
 }
 
-.contactInfo ul li span:hover{
-    transition: 1s;
-    color: #024a6b;
-}
 
 .contactInfo ul li span a{
     text-decoration: none;
     color: inherit;
+
 }
 
 .footer {
@@ -323,28 +337,10 @@ a:hover{
         display: flex;
         flex-direction: column;
     }
-    .container{
-        margin-top: 0;
-    }
-    .card-container{
-        flex-direction: column;
-    }
-    .container .card-container:nth-child(1),
-    .container .card-container:nth-child(3){
-        flex-direction: column-reverse;
-    }
-    .card{
-        height: 280px;
-        width: 300px;
-    }
     .card-text{
         width: 90%;
         margin-top: 2rem;
         text-align: center;
-    }
-    .card:hover > .card-wrapper::before{
-        height: 280px;
-        width: 280px;
     }
     .languages{
         justify-content: center;
