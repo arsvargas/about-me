@@ -346,7 +346,7 @@ h3 {
     position: relative;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 
@@ -382,7 +382,10 @@ h3 {
 .container .card:hover .face.face1{
     background-color: #ffffff96;
     transform: translateY(0);
-    
+    border-top-right-radius: 30% ;    
+    border-bottom-left-radius: 30%;
+    border-top-left-radius: 0;    
+    border-bottom-right-radius: 0;
 }
 
 .container .card .face.face1 .content{
